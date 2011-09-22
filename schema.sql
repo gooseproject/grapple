@@ -1,10 +1,9 @@
 CREATE TABLE grapple (
-       id INT AUTO_INCREMENT,
+       id INTEGER PRIMARY KEY AUTOINCREMENT,
        package TEXT,
        branch TEXT,
        commit_id TEXT,
        author TEXT,
        email TEXT,
-       status INT,
-       primary key(id)
+       status INTEGER
 );
