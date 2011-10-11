@@ -76,11 +76,6 @@ and refinements to Grapple:
 
 -  Create Makefile to automate testing and setup
 -  Have index return an API summary.
--  Have grapple.py read configuration from a configuration file
-
--  -  defaults: limit, ip\_whitelist, etc
--  -  database connection information
--
 -  Review for needed error handling
 -  Add logging
 -  Make a decorator to limit a url from being called from just whitelists
