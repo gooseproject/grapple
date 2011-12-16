@@ -75,6 +75,7 @@ def process_commits():
         giturl = config.get(CLIENT_SECTION, GITURL_VAR)
         commit = config.get(CLIENT_SECTION, GITCOMMIT_VAR)
 
+        name = j['package']
         replace_chars = config.get(CLIENT_SECTION, REPLACE_CHARS_VAR)
         for chars in replace_chars.split():
             r, w = chars.split(':')
@@ -83,7 +84,7 @@ def process_commits():
         args.append('build')
         args.append('--nowait')
         args.append(kojitag)
-        args.append("%s/%s.git#%s" % (giturl, j['package'], commit))
+        args.append("%s/%s.git#%s" % (giturl, name, commit))
 
         try:
 #            print "args: %s" % args
