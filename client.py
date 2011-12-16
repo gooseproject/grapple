@@ -6,7 +6,7 @@ import urllib2
 import subprocess
 
 CONFIG_ENV_VAR = "GRAPPLE_CONF_FILE"
-DEFAULT_CONFIG_FILE = "/etc/grapple.conf"
+DEFAULT_CONFIG_FILE = "/etc/grapple/grapple.conf"
 
 CLIENT_SECTION = 'client'
 QUERYURL_VAR = 'queryurl'
