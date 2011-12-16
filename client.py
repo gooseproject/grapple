@@ -15,6 +15,7 @@ KOJICONFIG_VAR = 'kojiconfig'
 KOJITAG_VAR = 'kojitag'
 GITURL_VAR = 'giturl'
 GITCOMMIT_VAR = 'gitcommit'
+REPLACE_CHARS_VAR = 'replace_chars'
 
 CONFIG_DEFAULTS = {GITURL_VAR: '',
         KOJITAG_VAR: '',
@@ -73,6 +74,11 @@ def process_commits():
         kojitag = config.get(CLIENT_SECTION, KOJITAG_VAR)
         giturl = config.get(CLIENT_SECTION, GITURL_VAR)
         commit = config.get(CLIENT_SECTION, GITCOMMIT_VAR)
+
+        replace_chars = config.get(CLIENT_SECTION, REPLACE_CHARS_VAR)
+        for chars in replace_chars.split():
+            r, w = chars.split(':')
+            name = name.replace(r, w)
 
         args.append('build')
         args.append('--nowait')
