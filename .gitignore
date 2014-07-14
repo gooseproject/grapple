@@ -1,4 +1,16 @@
-*.pyc
-tests/*.json
-grappledb
-*~
+ftp.redhat.com/
+combined/
+control/
+logs/
+specs/
+requires/
+build/
+install/
+.*.sw[po]
+*.py[co]
+
+skein.cfg.*
+
+# ignore files with sensitive data
+gh_settings.py
+github_settings.py
